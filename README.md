@@ -50,23 +50,54 @@ Start the server
 ```bash
    
 ```
+## API Reference
 
- 1. Upload a file : 
-METHOD : POST
-END POINT : /upload/
-FEILDS :
-a.Name
-b.fileImage(File that has to uploaded)
- 2. Get list of all the files :
-METHOD : GET
-END POINT : /getdetail/
- 3. Download a file :
-METHOD : GET
-END POINT : /getdetail/id
- 4. Update a file :
-METHOD : PUT
-END POINT : /update/id
- 5. Delete a file :
-METHOD : GET
-END POINT : /delete/id
+#### UPLOAD  FILES
+
+```http
+  POST /upload
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Name` | `string` | **Required**. Name  |
+| `fileImage` | `file` | **Required**.File must be selected (Any type of File ex: pdf,jpg,etc..)|
+
+#### GET ALL FILES DETAILS
+
+```http
+  GET /getdetail
+```
+
+#### DOWNLOAD A FILE
+
+```http
+  PUT /download/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of File to Download |
+
+#### UPDATE A FILE 
+
+```http
+  GET /update/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of File to Update |
+
+#### DELETE A FILE
+
+```http
+  GET /delete/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of File to Delete |
+
+
 
