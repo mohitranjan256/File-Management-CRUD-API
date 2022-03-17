@@ -45,11 +45,28 @@ Start the server
 ```
 
 ## API
+### Link
 
+```bash
+  link heroku 
+```
 
  1. Upload a file : 
+    METHOD : POST
+    END POINT : /upload/
+    FEILDS :
+     a.Name
+     b.fileImage(File that has to uploaded)
  2. Get list of all the files :
+    METHOD : GET
+    END POINT : /getdetail/
  3. Download a file :
+    METHOD : GET
+    END POINT : /getdetail/id
  4. Update a file :
+    METHOD : PUT
+    END POINT : /update/id
  5. Delete a file :
+    METHOD : GET
+    END POINT : /delete/id
 
