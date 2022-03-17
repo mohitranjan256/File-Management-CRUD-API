@@ -23,7 +23,7 @@ routes.get('/:id', async(req,res)=>{
     }
         catch(err){
             console.log(err)
-           return res.send("File Cannot be Updated !! ")
+           return res.send("File Cannot be Deleted !! ")
             
         }
     })
