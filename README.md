@@ -44,3 +44,12 @@ Start the server
   nodemon index.js
 ```
 
+## API
+
+
+ 1. Upload a file : 
+ 2. Get list of all the files :
+ 3. Download a file :
+ 4. Update a file :
+ 5. Delete a file :
+
