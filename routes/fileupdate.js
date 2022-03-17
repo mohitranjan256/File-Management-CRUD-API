@@ -11,7 +11,7 @@ routes.put('/:id',upload.single('fileImage'), async(req,res)=>{
     try{
         const downloadid = req.params.id
         const downloadfile = await files.findById(downloadid)
-        const filepath = path.join(__dirname,"../Images",downloadfile.Filename)
+        const filepath = path.join(__dirname,"../Images",downloadfile.File_Name)
         if(fs.existsSync(filepath) && req.file){
             const removefile = await fs.unlinkSync(filepath)
         }
