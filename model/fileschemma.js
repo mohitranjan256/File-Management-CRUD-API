@@ -10,14 +10,15 @@ const filesschema = new mongoose.Schema ({
         required :  true
     },
 
-    Filename : {
+    File_Name : {
         type : String,
         required : true
     },
-    FileImage :{
+    File_Location:{
         type : String
     }
 },{Timestamp: true})
 
 const files = mongoose.model('Files',filesschema)
 module.exports = files
+
