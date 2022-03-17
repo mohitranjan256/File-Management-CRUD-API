@@ -7,7 +7,7 @@ routes.post("/",upload.single('fileImage') , async(req,res)=>{
 
         try {
             if(req.file){
-                const filedetail = await files.create({Name : req.body.Name , File_Location : req.file.filename , FileImage : req.file.destination})
+                const filedetail = await files.create({Name : req.body.Name , File_Name : req.file.filename , File_Location : req.file.destination})
 
                 res.send("File Uploaded successfully")
             }
