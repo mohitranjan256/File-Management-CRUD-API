@@ -2,11 +2,11 @@ const dotenv = require('dotenv')
 dotenv.config()
 const express = require('express');
 const connectionMongodb = require('./db');
-
+const PORT = process.env.PORT || 5000
 connectionMongodb();
 
 const app = express();
-const PORT = 2929;
+
 
 app.use(express.json());
 app.use(express.urlencoded({
