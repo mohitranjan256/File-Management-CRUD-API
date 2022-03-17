@@ -18,7 +18,7 @@ routes.put('/:id',upload.single('fileImage'), async(req,res)=>{
         
         
             if(req.file){
-            const filedetail = await files.findByIdAndUpdate( downloadid ,{$set :{Name : req.body.Name , Filename : req.file.filename , FileImage : req.file.destination}},{new : true})
+            const filedetail = await files.findByIdAndUpdate( downloadid ,{$set :{Name : req.body.Name , File_Name : req.file.filename , File_Location : req.file.destination}},{new : true})
                     
             return res.send("File Updated successfully")
         }   else{
