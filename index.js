@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const express = require('express');
 const connectionMongodb = require('./db');
-const PORT = process.env.PORT || 5000
+const PORT = process.env.ATLAS_URL || 5000
 connectionMongodb();
 
 const app = express();
