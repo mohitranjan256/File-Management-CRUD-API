@@ -1,5 +1,5 @@
-const dotenv = require('dotenv')
-dotenv.config()
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const connectionMongodb = require('./db');
 const PORT = process.env.PORT || 5000
